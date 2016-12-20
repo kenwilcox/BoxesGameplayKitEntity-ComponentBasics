@@ -47,6 +47,9 @@
 		A4AA55291B69BEC0008D3323 /* starburst.png in Resources */ = {isa = PBXBuildFile; fileRef = A478E8AD1B57328B000EB4CF /* starburst.png */; };
 		A4B76F491B698E4F005B1902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B76F471B698E4F005B1902 /* Main.storyboard */; };
 		A4B76F4E1B698E4F005B1902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B76F4C1B698E4F005B1902 /* LaunchScreen.storyboard */; };
+		BEDFADFD1DE3D5DC004C935B /* JumpComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFADFC1DE3D5DC004C935B /* JumpComponent.swift */; };
+		BEDFADFE1DE3D818004C935B /* JumpComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFADFC1DE3D5DC004C935B /* JumpComponent.swift */; };
+		BEDFADFF1DE3D81E004C935B /* JumpComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFADFC1DE3D5DC004C935B /* JumpComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,7 @@
 		A4B76F4D1B698E4F005B1902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B76F4F1B698E4F005B1902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4DBA7C71B8534E60016F277 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BEDFADFC1DE3D5DC004C935B /* JumpComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		A413E9051B41F04500C6E371 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BEDFADFC1DE3D5DC004C935B /* JumpComponent.swift */,
 				A413E9121B41F34B00C6E371 /* GeometryComponent.swift */,
 				A413E90E1B41F11000C6E371 /* PlayerControlComponent.swift */,
 				A413E9101B41F11A00C6E371 /* ParticleComponent.swift */,
@@ -341,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDFADFF1DE3D81E004C935B /* JumpComponent.swift in Sources */,
 				11D279601BFAE9E00063A526 /* AppDelegate.swift in Sources */,
 				11D279631BFAEA420063A526 /* GeometryComponent.swift in Sources */,
 				11D279621BFAEA420063A526 /* Game.swift in Sources */,
@@ -354,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDFADFE1DE3D818004C935B /* JumpComponent.swift in Sources */,
 				A4440BB61B6C38980070765D /* Game.swift in Sources */,
 				A413E90F1B41F11000C6E371 /* PlayerControlComponent.swift in Sources */,
 				A413E9131B41F34B00C6E371 /* GeometryComponent.swift in Sources */,
@@ -367,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDFADFD1DE3D5DC004C935B /* JumpComponent.swift in Sources */,
 				A47E87D61B6FCD1000F9A307 /* GameViewController.swift in Sources */,
 				A47E87D51B6FCD0A00F9A307 /* AppDelegate.swift in Sources */,
 				A4AA55211B69BEBC008D3323 /* GeometryComponent.swift in Sources */,

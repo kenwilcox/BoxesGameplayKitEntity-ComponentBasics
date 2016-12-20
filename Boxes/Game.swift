@@ -32,6 +32,7 @@ class Game: NSObject, SCNSceneRendererDelegate {
     
     /// Keeps track of the time for use in the update method.
     var previousUpdateTime: TimeInterval = 0
+    var inverse: CGFloat = -1
     
     // MARK: Initialization
     
@@ -49,9 +50,9 @@ class Game: NSObject, SCNSceneRendererDelegate {
     */
     func setUpEntities() {
         // Create entities with components using the factory method.
-        let redBoxEntity = makeBoxEntity(forNodeWithName: "redBox")
+        let redBoxEntity = makeBoxEntity(forNodeWithName: "redBox", wantsPlayerControlComponent: true)
         
-        let yellowBoxEntity = makeBoxEntity(forNodeWithName: "yellowBox", withParticleComponentNamed: "Fire")
+        let yellowBoxEntity = makeBoxEntity(forNodeWithName: "yellowBox", wantsPlayerControlComponent: true, withParticleComponentNamed: "Fire")
         
         let greenBoxEntity = makeBoxEntity(forNodeWithName: "greenBox", wantsPlayerControlComponent: true)
         
@@ -70,6 +71,10 @@ class Game: NSObject, SCNSceneRendererDelegate {
             Try creating and attaching a ParticleComponent and 
             PlayerControlComponent for the purple box in the space below.
         */
+        let fireComponent = ParticleComponent(particleName: "Fire")
+        purpleBoxEntity.addComponent(fireComponent)
+        let playerControlComponent = PlayerControlComponent()
+        purpleBoxEntity.addComponent(playerControlComponent)
         
         // Keep track of all the newly-created box entities.
         boxEntities = [
@@ -106,8 +111,14 @@ class Game: NSObject, SCNSceneRendererDelegate {
             Iterate over each component in the component system that is a
             PlayerControlComponent.
         */
-        for case let component as PlayerControlComponent in playerControlComponentSystem.components {
-            component.jump()
+        var pos: CGFloat = 0
+        
+        //for case let component as PlayerControlComponent in playerControlComponentSystem.components {
+        for case let component as Jumping in playerControlComponentSystem.components {
+            
+            component.jump(x: (0.1 * inverse), y: 2 + (pos * 0.1), z: (-0.1 * inverse))
+            pos += 1
+            inverse *= -1
         }
     }
     

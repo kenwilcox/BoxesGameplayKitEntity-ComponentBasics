@@ -9,7 +9,7 @@
 import GameplayKit
 import SceneKit
 
-class PlayerControlComponent: GKComponent {
+class PlayerControlComponent: GKComponent, Jumping {
     // MARK: Properties
 
     /// A convenience property for the entity's geometry component.
@@ -20,8 +20,8 @@ class PlayerControlComponent: GKComponent {
     // MARK: Methods
     
     /// Tells this entity's geometry component to jump.
-    func jump() {
-        let jumpVector = SCNVector3(x: 0, y: 2, z: 0)
+    func jump(x: CGFloat, y: CGFloat, z: CGFloat) {
+        let jumpVector = SCNVector3(x: x, y: y, z: z)
         geometryComponent?.applyImpulse(jumpVector)
     }
 }
